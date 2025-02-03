@@ -10,7 +10,7 @@ This API allows you to classify a number and returns its properties such as whet
 
 ### **Endpoint**
 
-`GET <your-domain.com>/api/classify-number?number=371`
+`GET https://hng12-stage-1-uh7h.onrender.com/api/classify-number?number=371`
 
 ### **Query Parameters**
 
@@ -42,7 +42,11 @@ This API allows you to classify a number and returns its properties such as whet
 - **digit_sum**: The sum of the digits of the number.
 - **fun_fact**: A fun fact related to the number, fetched from the Numbers API.
 
+### **Possible Error Response Example**
+
 #### **(400 Bad Request)**
+
+If the user submits a non-numeric input:
 
 ```json
 {
@@ -63,8 +67,7 @@ This API allows you to classify a number and returns its properties such as whet
    - The API accepts **all valid integers** as valid inputs, including negative numbers and zero.
 
 2. **Public Access**:
-   - The API should be **publicly accessible**.
-   - The API should be **stable**, ensuring consistent behavior and reliable uptime.
+   - The API is **publicly accessible** at `https://hng12-stage-1-uh7h.onrender.com/api/classify-number?number=371`
 
 ### **Additional Notes**
 
@@ -73,16 +76,5 @@ This API allows you to classify a number and returns its properties such as whet
   Example:
 
   - For the number 371, the fact might be: `"371 is an Armstrong number because 3^3 + 7^3 + 1^3 = 371"`.
-
-### **Possible Error Response Example**
-
-If the user submits a non-numeric input:
-
-```json
-{
-  "number": "alphabet",
-  "error": true
-}
-```
 
 ---
